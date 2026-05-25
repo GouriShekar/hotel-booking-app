@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react";
+
 import axios from "axios";
+
 import { Navigate } from "react-router-dom";
 
 function Dashboard() {
@@ -8,7 +10,7 @@ function Dashboard() {
   const isAdmin = localStorage.getItem("isAdmin");
 
   if (!isAdmin) {
-    return <Navigate to="/login" />;
+    return <Navigate to="/l" />;
   }
 
   const [bookings, setBookings] = useState([]);
@@ -56,14 +58,17 @@ function Dashboard() {
 
     localStorage.removeItem("isAdmin");
 
-    window.location.href = "/login";
+    window.location.href = "/l";
   };
 
   useEffect(() => {
+
     fetchBookings();
+
   }, []);
 
   return (
+
     <div
       style={{
         minHeight: "100vh",
@@ -103,12 +108,13 @@ function Dashboard() {
           style={{
             background: "#b38b59",
             color: "white",
-            border: "none",
+            border: "2px solid #d4af37",
             padding: "14px 24px",
             borderRadius: "12px",
             fontSize: "16px",
             fontWeight: "bold",
             cursor: "pointer",
+            boxShadow: "0 0 10px rgba(212,175,55,0.5)",
             transition: "0.3s",
           }}
         >

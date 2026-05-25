@@ -5,6 +5,7 @@ import {
   Grid,
   Button
 } from "@mui/material";
+import { Link } from "react-router-dom";
 
 const Home = () => {
   return (
@@ -72,21 +73,23 @@ const Home = () => {
           </Typography>
 
           <Button
-            variant="contained"
-            sx={{
-              mt: 5,
-              px: 5,
-              py: 1.5,
-              borderRadius: "40px",
-              backgroundColor: "#b38b59",
-              fontSize: "16px",
-              "&:hover": {
-                backgroundColor: "#967347",
-              },
-            }}
-          >
-            Explore Luxury
-          </Button>
+  component={Link}
+  to="/rooms"
+  variant="contained"
+  sx={{
+    mt: 5,
+    px: 5,
+    py: 1.5,
+    borderRadius: "40px",
+    backgroundColor: "#b38b59",
+    fontSize: "16px",
+    "&:hover": {
+      backgroundColor: "#967347",
+    },
+  }}
+>
+  Explore Luxury
+</Button>
         </Box>
       </Box>
 
@@ -585,20 +588,22 @@ const Home = () => {
           </Typography>
 
           <Button
-            variant="contained"
-            sx={{
-              backgroundColor: "#b38b59",
-              px: 5,
-              py: 1.5,
-              borderRadius: "40px",
-              fontSize: "16px",
-              "&:hover": {
-                backgroundColor: "#967347",
-              },
-            }}
-          >
-            Book Your Stay
-          </Button>
+  component={Link}
+  to="/rooms"
+  variant="contained"
+  sx={{
+    backgroundColor: "#b38b59",
+    px: 5,
+    py: 1.5,
+    borderRadius: "40px",
+    fontSize: "16px",
+    "&:hover": {
+      backgroundColor: "#967347",
+    },
+  }}
+>
+  Book Your Stay
+</Button>
         </Container>
       </Box>
 
