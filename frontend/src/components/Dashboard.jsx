@@ -58,7 +58,7 @@ function Dashboard() {
 
     localStorage.removeItem("isAdmin");
 
-    window.location.href = "/l";
+    window.location.href = "/";
   };
 
   useEffect(() => {
