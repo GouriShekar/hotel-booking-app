@@ -109,7 +109,7 @@ function Booking() {
 
       await axios.post(
 
-        "http://localhost:5000/api/bookings",
+        "https://hotel-backend-bikd.onrender.com/api/bookings",
 
         bookingData
       );

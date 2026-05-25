@@ -19,7 +19,7 @@ function Dashboard() {
     try {
 
       const response = await axios.get(
-        "http://localhost:5000/api/bookings"
+        "https://hotel-backend-bikd.onrender.com/api/bookings"
       );
 
       setBookings(response.data);
@@ -37,7 +37,7 @@ function Dashboard() {
     try {
 
       await axios.delete(
-        `http://localhost:5000/api/bookings/${id}`
+        `https://hotel-backend-bikd.onrender.com/api/bookings/${id}`
       );
 
       alert("Booking Deleted");
