@@ -1,0 +1,16 @@
+input::placeholder {
+  color: rgba(255,255,255,0.75);
+}
+
+input[type="date"] {
+  color: white;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+  filter: invert(1);
+}
+
+button:hover {
+  opacity: 0.9;
+  transform: scale(1.02);
+}
